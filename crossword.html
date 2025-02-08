@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KGTimes Crossword Puzzle</title>
   <style>
+    .gradient-background {
+      background: rgb(255, 208, 229);
+      background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
+    }
     /* Heading styling */
     .page-heading {
       text-align: left;
       margin: 20px;
     }
     .page-heading h1 {
-      font-size: 42px;            /* fallback value */
+      font-size: 42px;
       font-size: 2.625rem;
-      line-height: 54.6px;         /* fallback value */
+      line-height: 54.6px;
       line-height: 3.4125rem;
       display: inline-block;
       font-family: nyt-karnakcondensed, Georgia;
@@ -26,7 +30,7 @@
     }
     /* Navigation buttons styling */
     .nav-buttons {
-      margin-top: 80px;
+      margin-top: 100px;
       text-align: center;
     }
     .nav-buttons a {
@@ -43,7 +47,7 @@
     }
   </style>
 </head>
-<body>
+<body class="gradient-background">
   <!-- Page Heading -->
   <div class="page-heading">
     <h1>The KGTimes Mini Crossword Puzzle</h1>
@@ -52,9 +56,9 @@
   
   <!-- Include the CryptoJS library for hashing the user id before sending it to the PuzzleMe server. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-  <!-- Include the javascript library for embedding this puzzle. -->
+  <!-- Include the JavaScript library for embedding this puzzle. -->
   <script id="pm-script" src="https://puzzleme.amuselabs.com/pmm/js/puzzleme-embed.js"></script>
-  <!-- Specify the Amuse Labs server name from where the puzzles will be served and trigger the embed flow. -->
+  <!-- Specify the Amuse Labs server name -->
   <script>
       PM_Config.PM_BasePath = "https://puzzleme.amuselabs.com/pmm/";
   </script>
