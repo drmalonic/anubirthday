@@ -10,6 +10,8 @@
     .gradient-background {
       background: rgb(255, 208, 229);
       background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
+      /* Ensure the background covers the full viewport height */
+      min-height: 100vh;
     }
     .bounce2 {
       animation: bounce2 2s ease infinite;
@@ -28,10 +30,16 @@
   </style>
 </head>
 <body class="gradient-background">
-  <!-- Main Content Container (without h-screen so the height is natural) -->
+  <!-- Main Content Container -->
   <div class="flex items-center justify-center py-10">
     <div class="flex flex-col items-center p-4">
+      <!-- New heading inserted before the image -->
+      <h2 class="text-4xl font-bold italic text-[#bd1e59] my-4">one last thing</h2>
+      
+      <!-- GIF Image -->
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
+      
+      <!-- Existing question -->
       <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">
         Will you be my Valentine?
       </h2>
@@ -48,7 +56,7 @@
     </div>
   </div>
   
-  <!-- Navigation Buttons Container with Reduced Top Margin -->
+  <!-- Navigation Buttons Container (with reduced top margin) -->
   <div class="flex justify-center mt-4 space-x-4">
     <a href="crossword.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Prev</a>
     <a href="index.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Home</a>
