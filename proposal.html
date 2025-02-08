@@ -28,7 +28,8 @@
   </style>
 </head>
 <body class="gradient-background">
-  <div class="flex items-center justify-center h-screen">
+  <!-- Main Content Container (without h-screen so the height is natural) -->
+  <div class="flex items-center justify-center py-10">
     <div class="flex flex-col items-center p-4">
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
       <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">
@@ -47,8 +48,8 @@
     </div>
   </div>
   
-  <!-- Fixed Navigation Buttons using Tailwind -->
-  <div class="flex justify-center mt-10 space-x-4">
+  <!-- Navigation Buttons Container with Reduced Top Margin -->
+  <div class="flex justify-center mt-4 space-x-4">
     <a href="crossword.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Prev</a>
     <a href="index.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Home</a>
   </div>
