@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KGTimes Crossword Puzzle</title>
   <style>
+    /* Heading styling */
+    .page-heading {
+      text-align: left;
+      margin: 20px;
+    }
+    .page-heading h1 {
+      font-size: 42px;            /* fallback value */
+      font-size: 2.625rem;
+      line-height: 54.6px;         /* fallback value */
+      line-height: 3.4125rem;
+      display: inline-block;
+      font-family: nyt-karnakcondensed, Georgia;
+      font-weight: 700;
+      margin-right: 16px;
+    }
+    .page-heading .subheading {
+      font-size: 1.25rem;
+      margin-top: 4px;
+    }
     /* Navigation buttons styling */
     .nav-buttons {
-      margin-top: 120px;
+      margin-top: 100px;
       text-align: center;
     }
     .nav-buttons a {
@@ -25,6 +44,12 @@
   </style>
 </head>
 <body>
+  <!-- Page Heading -->
+  <div class="page-heading">
+    <h1>The KGTimes Mini Crossword Puzzle</h1>
+    <div class="subheading">By KG</div>
+  </div>
+  
   <!-- Include the CryptoJS library for hashing the user id before sending it to the PuzzleMe server. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <!-- Include the javascript library for embedding this puzzle. -->
@@ -33,6 +58,7 @@
   <script>
       PM_Config.PM_BasePath = "https://puzzleme.amuselabs.com/pmm/";
   </script>
+  
   <!-- Embedded Puzzle -->
   <div style="position: relative; text-align: center;">
     <div class="pm-embed-div" 
@@ -44,7 +70,9 @@
     </div>
     <div class="pm-attribution-div" style="font-family: sans-serif; font-size: 12px; color: #666666; position: absolute; top: 100%; left: 50%; transform: translate(-50%, 0); padding-top: 5px; width: 100%;">
       Constructed by KG with the free 
-      <a href="https://amuselabs.com/games/crossword/" target="_blank" style="color: #666666; text-decoration: underline;">cross word maker</a> 
+      <a href="https://amuselabs.com/games/crossword/" target="_blank" style="color: #666666; text-decoration: underline;">
+        cross word maker
+      </a> 
       from Amuse Labs
     </div>
   </div>
