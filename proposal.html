@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valentines Day</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .gradient-background {
       background: rgb(255, 208, 229);
       background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
     }
-
     .bounce2 {
       animation: bounce2 2s ease infinite;
     }
-
     @keyframes bounce2 {
       0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -32,8 +31,10 @@
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
-      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Will you be my Valentine?</h2>
-      <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
+      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">
+        Will you be my Valentine?
+      </h2>
+      <div class="flex gap-4 pt-5 items-center" id="responseButtons">
         <button id="yesButton"
           class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
           Yes
@@ -45,11 +46,13 @@
       </div>
     </div>
   </div>
-  <div class="nav-buttons" style="margin-top: 40px;">
-    <a href="crossword.html">Prev</a>
-    <a href="index.html">Home</a>
+  
+  <!-- Fixed Navigation Buttons using Tailwind -->
+  <div class="flex justify-center mt-10 space-x-4">
+    <a href="crossword.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Prev</a>
+    <a href="index.html" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Home</a>
   </div>
-
+  
   <script type="module">
     import confetti from 'https://cdn.skypack.dev/canvas-confetti';
     const yesButton = document.getElementById('yesButton');
@@ -76,12 +79,12 @@
       if (noClickCount < 5) {
         noClickCount++;
         imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 35; // Increase height by 5px on each click
+        buttonHeight += 35;
         buttonWidth += 35;
-        fontSize += 25; // Increase font size by 1px on each click
-        yesButton.style.height = `${buttonHeight}px`; // Update button height
+        fontSize += 25;
+        yesButton.style.height = `${buttonHeight}px`;
         yesButton.style.width = `${buttonWidth}px`;
-        yesButton.style.fontSize = `${fontSize}px`; // Update font size
+        yesButton.style.fontSize = `${fontSize}px`;
         if (noClickCount < 6) {
           noButton.textContent = ["No", "Are you sure?", "Cutu please", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."][noClickCount];
         }
@@ -89,10 +92,10 @@
     });
   
     yesButton.addEventListener('click', () => {
-      imageDisplay.src = './images/image7.gif'; // Change to image7.gif
-      valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
-      responseButtons.style.display = 'none'; // Hide both buttons
-      confetti(); // Trigger confetti animation
+      imageDisplay.src = './images/image7.gif';
+      valentineQuestion.textContent = "Yayyy!! :3";
+      responseButtons.style.display = 'none';
+      confetti();
     });
   </script>  
 </body>
