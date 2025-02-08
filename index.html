@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px;
+    }
+    .scrollable {
+      overflow-y: auto;
+      max-height: 80vh;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .letter {
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      padding: 10px;
+      min-height: 150px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .button-container a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scrollable">
+      <h1>Happy Birthday!</h1>
+      <!-- Replace with your own GIF or path -->
+      <img src="happy-birthday.gif" alt="Happy Birthday GIF" style="max-width:100%;">
+      
+      <!-- Editable love letter -->
+      <div class="letter" contenteditable="true">
+        <p>Dear [Her Name],</p>
+        <p>Your special day means the world to me. Here's a little message to remind you how loved you are.</p>
+        <p>Love, [Your Name]</p>
+      </div>
+      
+      <!-- Photo Gallery -->
+      <h2>Our Memories</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+        <img src="photo4.jpg" alt="Photo 4">
+      </div>
+    </div>
+    <div class="button-container">
+      <a href="crossword.html">Next</a>
+    </div>
+  </div>
+</body>
+</html>
