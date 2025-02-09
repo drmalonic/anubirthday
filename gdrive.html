@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instagram Reels</title>
+  <title>WE SOOOOO CUTEEEEE</title>
   <style>
     /* Basic styling and gradient background */
     body {
@@ -15,7 +15,7 @@
       align-items: center;
     }
     .gradient-background {
-      background: rgb(255, 208, 229);
+      background: rgb(255,208,229);
       background: linear-gradient(180deg, rgba(255,208,229,1) 0%, rgba(255,232,242,1) 36%, rgba(255,255,255,1) 100%);
       min-height: 100vh;
       width: 100%;
@@ -34,18 +34,17 @@
       font-weight: 700;
       color: #333;
     }
-    /* Reels container styling */
-    .reels-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+    /* Embed container styling */
+    .embed-container {
+      margin: 10px auto;
+      text-align: center;
     }
-    .reel {
-      flex: 1;
-      max-width: 540px; /* Instagram embeds usually work well around this width */
-      min-width: 300px;
+    .embed-container iframe {
+      width: 100%;
+      height: 900px; /* Adjust the height as desired */
+      border: none;
+      display: block;
+      margin: 0 auto;
     }
     /* Navigation buttons styling */
     .nav-buttons {
@@ -71,32 +70,19 @@
   <div class="container">
     <!-- Page Heading -->
     <div class="page-heading">
-      Instagram Reels
+      Watch Our Video
     </div>
     
-    <!-- Reels Container -->
-    <div class="reels-container">
-      <!-- Instagram Reel Embed 1 -->
-      <div class="reel">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://drive.google.com/file/d/1y9uIvwmoBVpS-6LdxF-g900JjEEls5w4/view?usp=sharing" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
-        </blockquote>
-      </div>
-      
-      <!-- Instagram Reel Embed 2 -->
-      <div class="reel">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DF1azUMpPiV/?igsh=NTc4MTIwNjQ2YQ==" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
-        </blockquote>
-      </div>
-    </div>
-    
-    <!-- Navigation Buttons -->
-    <div class="nav-buttons">
-      <a href="index.html">Prev</a>
-      <a href="museum.html">Next</a>
+    <!-- Embedded Google Drive Video -->
+    <div class="embed-container">
+      <iframe src="https://drive.google.com/file/d/FILE_ID/preview" title="Google Drive Video"></iframe>
     </div>
   </div>
   
-  <!-- Instagram Embed Script -->
-  <script async src="//www.instagram.com/embed.js"></script>
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <a href="index.html">Prev</a>
+    <a href="museum.html">Next</a>
+  </div>
 </body>
 </html>
