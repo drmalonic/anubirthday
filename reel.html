@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Reels</title>
+  <style>
+    /* Basic styling and gradient background */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gradient-background {
+      background: rgb(255, 208, 229);
+      background: linear-gradient(180deg, rgba(255,208,229,1) 0%, rgba(255,232,242,1) 36%, rgba(255,255,255,1) 100%);
+      min-height: 100vh;
+      width: 100%;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    /* Page heading styling */
+    .page-heading {
+      text-align: center;
+      margin: 10px auto 20px auto;
+      font-size: 2.625rem;
+      font-family: nyt-karnakcondensed, Georgia;
+      font-weight: 700;
+      color: #333;
+    }
+    /* Reels container styling */
+    .reels-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .reel {
+      flex: 1;
+      max-width: 540px; /* Instagram embeds usually work well around this width */
+      min-width: 300px;
+    }
+    /* Navigation buttons styling */
+    .nav-buttons {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .nav-buttons a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body class="gradient-background">
+  <div class="container">
+    <!-- Page Heading -->
+    <div class="page-heading">
+      Instagram Reels
+    </div>
+    
+    <!-- Reels Container -->
+    <div class="reels-container">
+      <!-- Instagram Reel Embed 1 -->
+      <div class="reel">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DF1Y79ypRJ0/?igsh=NTc4MTIwNjQ2YQ==" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+        </blockquote>
+      </div>
+      
+      <!-- Instagram Reel Embed 2 -->
+      <div class="reel">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_2/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+        </blockquote>
+      </div>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="index.html">Prev</a>
+      <a href="museum.html">Next</a>
+    </div>
+  </div>
+  
+  <!-- Instagram Embed Script -->
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
