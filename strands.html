@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The KGTimes Strands</title>
+  <style>
+    /* Basic styling and gradient background */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gradient-background {
+      background: rgb(255,208,229);
+      background: linear-gradient(180deg, rgba(255,208,229,1) 0%, rgba(255,232,242,1) 36%, rgba(255,255,255,1) 100%);
+      min-height: 100vh;
+      width: 100%;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    /* Page heading styling */
+    .page-heading {
+      text-align: center;
+      margin: 10px auto 5px auto;
+      font-size: 2.625rem;
+      font-family: nyt-karnakcondensed, Georgia;
+      font-weight: 700;
+      color: #333;
+    }
+    /* Embed container styling */
+    .embed-container {
+      margin: 10px auto;
+      text-align: center;
+    }
+    /* The embed element (either an iframe or PuzzleMe div) takes full width and fixed height */
+    .embed-container iframe,
+    .embed-container .pm-embed-div {
+      width: 100%;
+      height: 700px;
+      border: none;
+      display: block;
+      margin: 0 auto;
+    }
+    /* Attribution styling */
+    .pm-attribution-div {
+      font-family: sans-serif;
+      font-size: 12px;
+      color: rgb(102,102,102);
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+    }
+    /* Navigation buttons styling */
+    .nav-buttons {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .nav-buttons a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body class="gradient-background">
+  <div class="container">
+    <!-- Page Heading -->
+    <div class="page-heading">
+      The KGTimes Strands
+    </div>
+    
+    <!-- Embedded Puzzle Container -->
+    <div class="embed-container">
+      <!-- Include the CryptoJS library for hashing the user id before sending it to the PuzzleMe server. -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+      <!-- Include the JavaScript library for embedding this puzzle. -->
+      <script id="pm-script" src="https://puzzleme.amuselabs.com/pmm/js/puzzleme-embed.js"></script>
+      <!-- Specify the Amuse Labs server name from where the puzzles will be served and trigger the embed flow. -->
+      <script>
+          PM_Config.PM_BasePath = "https://puzzleme.amuselabs.com/pmm/";
+      </script>
+      <!-- Embedded Word Search Puzzle -->
+      <div style="position: relative; text-align: center;">
+        <div class="pm-embed-div" data-id="174100af" data-set="8aeaeb05fdf74f6841236c4f06dd082f9f8156314749e86039f1065f531e7208" data-puzzleType="wordsearch" data-height="700px" data-mobileMargin="10px"></div>
+        <div class="pm-attribution-div">
+          Constructed by Keshav Gupta using the <a href="https://amuselabs.com/games/word-search/" target="_blank" style="color: #666666; text-decoration: underline;">word search puzzle builder</a> from Amuse Labs
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <a href="crossword.html">Prev</a>
+    <a href="proposal.html">Next</a>
+  </div>
+</body>
+</html>
