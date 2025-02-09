@@ -22,12 +22,27 @@
     }
     .container {
       width: 90%;
-      max-width: 1200px; /* Increased max width for a larger embed */
+      max-width: 1200px; /* Increased max width for larger embed */
       margin: 20px auto;
+    }
+    /* Hyperlink styling for "Birthday Card" */
+    .card-link {
+      text-align: center;
+      margin: 10px auto;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0070f3;
+    }
+    .card-link a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-link a:hover {
+      text-decoration: underline;
     }
     /* Embed container styling */
     .embed-container {
-      margin: 20px auto;
+      margin: 10px auto; /* Slightly reduced margin between the link and the embed */
       text-align: center;
     }
     .embed-container iframe {
@@ -58,10 +73,16 @@
 </head>
 <body class="gradient-background">
   <div class="container">
+    <!-- Hyperlink for Birthday Card -->
+    <div class="card-link">
+      <a href="https://birthday.mewtru.com/TG48Rq1A" target="_blank">Birthday Card</a>
+    </div>
+    
     <!-- Embedded page -->
     <div class="embed-container">
       <iframe src="https://birthday.mewtru.com/TG48Rq1A" title="Birthday Page"></iframe>
     </div>
+    
     <!-- Navigation Button -->
     <div class="button-container">
       <a href="crossword.html">Next</a>
